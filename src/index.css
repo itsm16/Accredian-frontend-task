@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.main{
+    height: calc(100vh - 80px);
+    background-color: white;
+}
+
+.mainImg{
+    background-image: url(assets/mainBg-sm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+}
