@@ -12,13 +12,14 @@ function Modal({ open, setOpen }: ModalProps) {
             await axios.post("http://localhost:3000/", {
                 referrerName, referrerEmail, recipientEmail, phone
             });
-
-            console.log(referrerName, referrerEmail, recipientEmail, phone);
             
             reset();
         } catch (error) {
             console.error("Error submitting form:", error);
         }
+
+        setOpen(false);
+        alert("Refer Successful")
     };
 
     return (
