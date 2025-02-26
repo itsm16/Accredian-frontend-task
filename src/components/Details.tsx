@@ -1,10 +1,8 @@
-import { LuChevronRight } from "react-icons/lu";
+import { LuChevronRight, LuCircleChevronRight } from "react-icons/lu";
 import { hat } from "../assets/assets";
-import { useState } from "react";
-import Modal from "./Modal";
+import { ModalProps } from '../types'
 
-function Details() {
-  const [open, setOpen] = useState<boolean>(false);
+function Details({ setOpen }: ModalProps) {
 
   const courses = [
     {
@@ -55,7 +53,7 @@ function Details() {
             <div className="bg-blue-600 rounded-t-md text-white h-10 flex items-center px-2">
               All programs <LuChevronRight className="mt-1" />
             </div>
-            <div className="flex flex-col h-[80%] justify-evenly px-2 divide-y divide-gray-300">
+            <div className="flex flex-col h-[80%] justify-evenly px-2 divide-y divide-gray-300 overflow-y-auto">
               <div className="py-2">Product Management</div>
               <div className="py-2">Strategy & Leadership</div>
               <div className="py-2">Business Management</div>
@@ -67,7 +65,7 @@ function Details() {
             </div>
           </div>
 
-          <div className="h-full w-[70%] shadow-lg flex pb-1 border-gray-200">
+          <div className="h-full w-[70%] shadow-lg flex pb-1 border-gray-200 overflow-y-auto">
             <div className="w-[60%]">
               <div className="text-[#1350A0] h-full">
                 <div className="bg-[#AFCEF7] rounded-t-md rounded-r-none font-semibold h-10 flex items-center px-2">
@@ -115,12 +113,17 @@ function Details() {
               </div></div>
           </div>
         </div>
-        <div className="w-[80%] flex justify-end">k</div>
+        <div className="w-[80%] flex justify-end">
+          <button className="bg-white btn text-black shadow-none"> 
+            Show More
+            <LuChevronRight/>
+          </button>
+        </div>
       </div>
       <div className="text-black">
-      <button onClick={() => setOpen(true)} className='btn bg-blue-500 rounded-md border-none shadow-none'>Refer Now</button>
+        <button onClick={() => setOpen(true)} className='btn bg-blue-500 rounded-md border-none shadow-none'>Refer Now</button>
       </div>
-      <Modal open={open} setOpen={setOpen} />
+      {/* <Modal open={open} setOpen={setOpen} /> */}
     </div>
   );
 }

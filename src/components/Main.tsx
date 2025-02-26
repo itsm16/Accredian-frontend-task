@@ -1,10 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { mainImg } from "../assets/assets";
-import Modal from "./Modal";
+import { ModalProps } from "../types";
+// import Modal from "./Modal";
 
-function Main() {
 
-  const [open, setOpen] = useState<boolean>(false);
+function Main({setOpen}:ModalProps) {
+
+  // const [open, setOpen] = useState<boolean>(false);
 
   return (
     <div className="min-h-fit pb-5 bg-white text-black flex flex-col items-center w-full ">
@@ -69,7 +71,7 @@ function Main() {
 
         </div>
       </div>
-            <Modal open={open} setOpen={setOpen} />
+            {/* <Modal open={open} setOpen={setOpen} /> */}
     </div>
   );
 }

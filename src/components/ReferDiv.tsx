@@ -1,10 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { howRefer, howReferSm } from "../assets/assets";
-import Modal from "./Modal";
+import { ModalProps } from "../types";
+// import Modal from "./Modal";
 
-function ReferDiv() {
+function ReferDiv({setOpen}:ModalProps) {
 
-  const [open, setOpen] = useState<boolean>(false);
+  // const [open, setOpen] = useState<boolean>(false);
 
   return <>
     <div className=" bg-blue-100 md:flex flex-col justify-center items-center py-8 hidden">
@@ -20,7 +21,7 @@ function ReferDiv() {
       <img src={howReferSm} alt="" />
       <button onClick={()=>setOpen(true)} className="btn bg-blue-600 border-none">Refer Now</button>
     </div>
-      <Modal open={open} setOpen={setOpen}/>
+      {/* <Modal open={open} setOpen={setOpen}/> */}
   </>
 }
 export default ReferDiv;
