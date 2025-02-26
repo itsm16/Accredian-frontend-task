@@ -3,9 +3,9 @@ import { mainImg } from "../assets/assets";
 import Modal from "./Modal";
 
 function Main() {
-  
+
   const [open, setOpen] = useState<boolean>(false);
-  
+
   return (
     <div className="min-h-fit pb-5 bg-white text-black flex flex-col items-center w-full ">
       <div className="flex items-center md:w-[50%] max-w-[700px] mt-4 md:mt-8 md:mb-5 text-gray-700 justify-between px-10 md:px-15 bg-green-100 border-none rounded-3xl h-12 md:gap-0 gap-4">
@@ -31,7 +31,6 @@ function Main() {
             <button onClick={() => setOpen(true)} className="btn bg-blue-600 text-white border-none">Refer Now</button>
           </div>
           {/* You can open the modal using document.getElementById('ID').showModal() method */}
-          <Modal open={open} setOpen={setOpen}/>
           <img className="w-[100%] h-[100%]" src={mainImg} alt="" />
         </div>
 
@@ -64,11 +63,13 @@ function Main() {
                 </div>
               </div>
               <button onClick={() => setOpen(true)} className="md:hidden btn bg-blue-600 border-none mt-8">Refer Now</button>
+
             </div>
           </div>
 
         </div>
       </div>
+            <Modal open={open} setOpen={setOpen} />
     </div>
   );
 }

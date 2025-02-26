@@ -11,17 +11,28 @@ function Modal({ open, setOpen }: ModalProps) {
         <>
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             <dialog id="my_modal_3" className={`modal ${open ? `modal-open` : ``}`}>
-                <div className="modal-box bg-white">
-                    <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
-                        <button onClick={() => setOpen(false)} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                        <div>Login</div>
-                        <div className=" mt-5 flex flex-col gap-5">
-                            <input className="text-white input input-primary border-none" />
-                            <input className="text-white input input-primary" />
+                <div className="modal-box bg-white text-black">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button onClick={() => setOpen(false)} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    <div className="flex flex-col gap-7">
+                        <div >
+                            <div>Your Details</div>
+                            <div className="flex flex-col gap-3 mt-1">
+                                <input placeholder="Name" type="text" className="text-black input outline-none border-black bg-white" />
+                                <input placeholder="Email" type="text" className="text-black input outline-none border-black bg-white" />
+
+                            </div>
                         </div>
-                        <button className="btn btn-primary mt-5">Login</button>
-                    </form>
+                        <div >
+                            <div>Who you want to refer?</div>
+                            <div className="flex flex-col gap-3 mt-1">
+                                <input placeholder="Name" type="text" className="text-black input outline-none border-black bg-white" />
+                                <input placeholder="Email" type="text" className="text-black input outline-none border-black bg-white" />
+
+                            </div>
+                        </div>
+                        <button className="btn w-[50%] rounded-md bg-blue-600 text-white border-none">Refer Now</button>
+                    </div>
                 </div>
             </dialog>
         </>

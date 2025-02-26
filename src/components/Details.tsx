@@ -1,7 +1,10 @@
 import { LuChevronRight } from "react-icons/lu";
 import { hat } from "../assets/assets";
+import { useState } from "react";
+import Modal from "./Modal";
 
 function Details() {
+  const [open, setOpen] = useState<boolean>(false);
 
   const courses = [
     {
@@ -115,8 +118,9 @@ function Details() {
         <div className="w-[80%] flex justify-end">k</div>
       </div>
       <div className="text-black">
-      <button className='btn bg-blue-500 rounded-md border-none shadow-none'>Refer Now</button>
+      <button onClick={() => setOpen(true)} className='btn bg-blue-500 rounded-md border-none shadow-none'>Refer Now</button>
       </div>
+      <Modal open={open} setOpen={setOpen} />
     </div>
   );
 }
