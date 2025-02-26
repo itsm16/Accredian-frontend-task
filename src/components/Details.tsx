@@ -1,4 +1,4 @@
-import { LuChevronRight, LuCircleChevronRight } from "react-icons/lu";
+import { LuChevronRight } from "react-icons/lu";
 import { hat } from "../assets/assets";
 import { ModalProps } from '../types'
 
