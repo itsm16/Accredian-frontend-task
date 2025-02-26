@@ -36,7 +36,7 @@ function Faq() {
                     </div>
                 </div>
                 <div className="w-full hidden md:block relative rounded-md h-[180px] bg-blue-600">
-                    <img className="absolute bottom-0 z-0" src={circle} alt="" />
+                    <img className="absolute bottom-0 z-0 h-[100%] " src={circle} alt="" />
                     <div className="flex w-full h-full px-10 text-white justify-between items-center">
                         <div className="z-5 w-[70%] flex gap-5">
                             <img className="h-12" src={headset} alt="" />
